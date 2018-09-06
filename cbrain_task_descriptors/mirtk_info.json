@@ -1,0 +1,88 @@
+{
+    "command-line": "python /usr/local/bin/mirtk info [INPUT_FILE] [IMAGE_FLAG] > [OUTPUT1]",
+    "container-image": {
+        "entrypoint": false,
+        "image": "bopucky/cnbp:mirtk",
+        "type": "docker",
+        "working-directory": "/data"
+    },
+    "description": "Prints some useful information about the given input file, which can be an image, transformation (requires MIRTK Transformation module), or point set (requires MIRTK Point Set module).",
+    "error-codes": [
+        {
+            "code": 1,
+            "description": "Crashed"
+        }
+    ],
+    "groups": [
+        {
+            "all-or-none": false,
+            "id": "group1",
+            "members": [
+                "input_file",
+                "image_flag"
+            ],
+            "mutually-exclusive": false,
+            "name": "the param group",
+            "one-is-required": false
+        }
+    ],
+    "inputs": [
+        {
+            "id": "input_file",
+            "name": "Input image or transformation or point set file.",
+            "optional": true,
+            "type": "File",
+            "value-key": "[INPUT_FILE]"
+        },
+        {
+            "command-line-flag": "-a",
+            "id": "image_flag",
+            "name": "Print attributes of image.",
+            "optional": true,
+            "type": "Flag",
+            "value-key": "[IMAGE_FLAG]"
+        }
+    ],
+    "name": "mirtk_info",
+    "output-files": [
+        {
+            "id": "output1",
+            "name": "The first output",
+            "optional": true,
+            "path-template": "[INPUT_FILE].txt",
+            "path-template-stripped-extensions": [
+                ".log"
+            ],
+            "value-key": "[OUTPUT1]"
+        }
+    ],
+    "schema-version": "0.5",
+    "suggested-resources": {
+        "cpu-cores": 1,
+        "ram": 1,
+        "walltime-estimate": 60
+    },
+    "tags": {
+        "foo": "bar",
+        "purpose": "testing",
+        "status": "example"
+    },
+    "tool-version": "v0.1.0",
+"tests": [
+        {
+	     "name": "test1",
+	     "invocation": {
+                "input_file":"/test-data/20180815125814_Sag_CUBE_T2_7.nii.gz",
+                },
+            "assertions": {
+                "exit-code": 0,
+                "output-files": [
+                    {
+                        "id": "output1",
+                        "md5-reference": "0868f0b9bf25d4e6a611be8f02a880b5"
+                    }
+                ]
+            }
+    }
+   ]
+}
