@@ -1,2 +1,2 @@
 # BoutiquesDescriptors
-Boutiques task descripts
+Boutiques task descriptors
