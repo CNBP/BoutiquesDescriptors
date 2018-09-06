@@ -54,7 +54,7 @@
     "output-files": [
         {
             "id": "output1",
-            "name": "The output of stdout written to a file",
+            "name": "STDOUT written to a file",
             "optional": true,
             "path-template": "[INPUT_FILE]_draw-em_pipeline.txt",
             "path-template-stripped-extensions": [
