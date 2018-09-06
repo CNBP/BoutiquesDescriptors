@@ -58,7 +58,7 @@
             "optional": true,
             "path-template": "[INPUT_FILE]_draw-em_pipeline.txt",
             "path-template-stripped-extensions": [
-                ".log"
+                ".log",".nii.gz"
             ],
             "value-key": "[OUTPUT1]"
         },
