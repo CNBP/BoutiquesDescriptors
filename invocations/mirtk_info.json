@@ -2,7 +2,7 @@
     "command-line": "python /usr/local/bin/mirtk info [INPUT_FILE] [IMAGE_FLAG] > [OUTPUT1]",
     "container-image": {
         "entrypoint": false,
-        "image": "bopucky/cnbp:mirtk",
+        "image": "cnbp/mirtk:v1.1.1",
         "type": "docker",
         "working-directory": "/data"
     },
