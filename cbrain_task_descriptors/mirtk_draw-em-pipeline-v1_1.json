@@ -90,7 +90,7 @@
             "id": "segmentations_data_files",
             "name": "The dofs files and folders",
             "optional": true,
-            "path-template": "segemtations-data"
+            "path-template": "segmentations-data"
         },
         {
             "id": "t2_files",
