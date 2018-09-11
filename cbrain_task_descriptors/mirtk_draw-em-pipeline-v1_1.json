@@ -2,7 +2,7 @@
     "command-line": "/bin/bash /DrawEM/pipelines/neonatal-pipeline-v1.1.sh [INPUT_FILE] [AGE] [T] > [OUTPUT1]",
     "container-image": {
         "entrypoint": false,
-        "image": "bopucky/cnbp:mirtk",
+        "image": "cnbp/mirtk:v1.1.1",
         "type": "docker",
         "working-directory": "/data"
     },
@@ -66,37 +66,37 @@
             "id": "bias_files",
             "name": "The bias files and folders",
             "optional": true,
-            "path-template": "bias/*"
+            "path-template": "bias"
         },
         {
             "id": "dofs_files",
             "name": "The dofs files and folders",
             "optional": true,
-            "path-template": "dofs/*"
+            "path-template": "dofs"
         },
         {
             "id": "n4_files",
             "name": "The N4 files and folders",
             "optional": true,
-            "path-template": "N4/*"
+            "path-template": "N4"
         },
         {
             "id": "segmentations_files",
             "name": "The segmentations files and folders",
             "optional": true,
-            "path-template": "segmentations/*"
+            "path-template": "segmentations"
         },
         {
             "id": "segmentations_data_files",
             "name": "The dofs files and folders",
             "optional": true,
-            "path-template": "segemtations-data/*"
+            "path-template": "segemtations-data"
         },
         {
             "id": "t2_files",
             "name": "The T2 files and folders",
             "optional": true,
-            "path-template": "T2/*"
+            "path-template": "T2"
         }
     ],
     "schema-version": "0.5",
