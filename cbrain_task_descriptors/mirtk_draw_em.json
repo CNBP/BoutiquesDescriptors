@@ -1,4 +1,7 @@
 {
+    "name": "MirtkDrawEm",
+    "tool-version": "v1.1.1",
+    "schema-version": "0.5",
     "command-line": "/bin/bash /DrawEM/pipelines/neonatal-pipeline-v1.1.sh [INPUT_FILE] [AGE] [T] > [OUTPUT1]",
     "container-image": {
         "entrypoint": false,
@@ -50,7 +53,6 @@
         }
    
     ],
-    "name": "mirtk_draw-em-pipeline-v1_1",
     "output-files": [
         {
             "id": "output1",
@@ -99,7 +101,6 @@
             "path-template": "T2"
         }
     ],
-    "schema-version": "0.5",
     "suggested-resources": {
         "cpu-cores": 4,
         "ram": 32,
@@ -110,7 +111,6 @@
         "purpose": "testing",
         "status": "example"
     },
-    "tool-version": "v1.1.1",
     "tests": [
         {
 	     "name": "test1",
