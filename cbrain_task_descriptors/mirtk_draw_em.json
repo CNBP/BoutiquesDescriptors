@@ -104,7 +104,7 @@
     "suggested-resources": {
         "cpu-cores": 4,
         "ram": 32,
-        "walltime-estimate": 720
+        "walltime-estimate": 75000
     },
     "tags": {
         "mirtk": "draw-em-pipeline",
